@@ -1,3 +1,8 @@
+// @ts-ignore
+import { Stemmer } from 'sastrawijs';
+
+const stemmer = new Stemmer();
+
 export function preprocessText(text: string): string[] {
     if (!text) return [];
     
@@ -20,6 +25,9 @@ export function preprocessText(text: string): string[] {
     ]);
     
     tokens = tokens.filter(t => !stopwords.has(t));
+    
+    // 5. Stemming (Bahasa Indonesia)
+    tokens = tokens.map(t => stemmer.stem(t));
     
     return tokens;
 }
