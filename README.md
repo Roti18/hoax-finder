@@ -8,7 +8,7 @@ HoaxFinder dibangun untuk melakukan pencarian terhadap kumpulan data klarifikasi
 ## Metode & Teknologi yang Digunakan
 - **Metode Pencarian**: Aplikasi ini mengimplementasikan algoritma pemeringkatan **Okapi BM25**. Algoritma ini berjalan sepenuhnya di sisi *client-side* untuk mencocokkan kueri pengguna dengan dokumen indeks berdasarkan frekuensi kata (TF) dan *Inverse Document Frequency* (IDF).
 - **Preprocessing Teks**: Sebelum diindeks, teks dokumen dan kueri melewati tahapan *case folding*, penghapusan tanda baca, *tokenizing*, filter *stopword* (bahasa Indonesia), dan *stemming* (menggunakan algoritma sastrawi/aturan *stemming* dasar bahasa Indonesia).
-- **Dataset**: Data yang digunakan berasal dari dataset JSON (`komdigi_hoaks.json`) yang berisi artikel klarifikasi hoaks.
+- **Dataset**: Data yang digunakan bersumber dari dataset Kaggle [Indonesian Hoax News Dataset](https://www.kaggle.com/datasets/ireddragonicy/indonesian-hoax-news-dataset) yang disimpan dalam format JSON (`komdigi_hoaks.json`). Dataset ini berisi kumpulan artikel klarifikasi hoaks dari Kementerian Komunikasi dan Digital RI.
 - **Tech Stack**: 
   - [SvelteKit](https://kit.svelte.dev/) (Svelte 5) - *Frontend Framework*
   - [Tailwind CSS](https://tailwindcss.com/) - *Styling*
